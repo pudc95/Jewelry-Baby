@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jewelry Baby</title>
+  <!-- 引入 Vue.js -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <style>
+    /* 顶栏样式 */
+    header {
+      background-color: #333;
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    /* 页面样式 */
+    main {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    h1 {
+      font-size: 48px;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 20px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <!-- 顶栏 -->
+  <header>
+    <h1>Jewelry Baby</h1>
+  </header>
+
+  <!-- 页面内容 -->
+  <main id="app">
+    <h2>{{ greeting }}</h2>
+    <p>{{ description }}</p>
+  </main>
+
+  <script>
+    // 创建一个 Vue 实例
+    new Vue({
+      el: '#app',
+      data: {
+        greeting: 'Welcome to Jewelry Baby!',
+        description: 'Your one-stop shop for all things beautiful and elegant.'
+      }
+    });
+  </script>
+</body>
+</html>
