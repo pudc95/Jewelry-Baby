@@ -24,39 +24,46 @@
       height: 500px;
       margin: 100px auto;
       overflow: hidden;
-      perspective: 1000px; /* 让卡片可以有透视效果 */
+      perspective: 1500px; /* 3D 透视效果 */
     }
 
     /* 卡片容器 */
     .carousel-wrapper {
       display: flex;
       transition: transform 0.5s ease;
-      transform-style: preserve-3d; /* 3D 变换 */
-      transform: rotateY(0deg);
+      transform-style: preserve-3d; /* 允许3D变换 */
+      position: relative;
     }
 
-    /* 卡片的基础样式 */
+    /* 单张卡片样式 */
     .carousel-card {
       width: 300px;
       height: 400px;
-      margin: 0 20px;
       background-color: #fff;
       border-radius: 10px;
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-      position: relative;
+      position: absolute;
+      top: 0;
       transform-origin: center;
       transition: transform 0.5s ease;
     }
 
-    /* 大卡片 */
+    /* 中间的卡片（正面卡片） */
     .carousel-card.big-card {
-      transform: rotateY(0deg) translateZ(150px); /* 正面大卡片 */
-      z-index: 10;
+      transform: rotateY(0deg) translateZ(300px); /* 正面卡片 */
+      z-index: 10; /* 使其在最前面 */
     }
 
-    /* 倾斜的卡片（圆筒式倾斜） */
-    .carousel-card.lean-card {
-      transform: rotateY(30deg) translateZ(50px); /* 倾斜卡片 */
+    /* 左侧和右侧的卡片（倾斜卡片） */
+    .carousel-card.lean-card-left {
+      transform: rotateY(-30deg) translateZ(100px); /* 左侧倾斜 */
+      z-index: 5;
+      opacity: 0.7;
+    }
+
+    .carousel-card.lean-card-right {
+      transform: rotateY(30deg) translateZ(100px); /* 右侧倾斜 */
+      z-index: 5;
       opacity: 0.7;
     }
 
@@ -71,12 +78,15 @@
       border: none;
       cursor: pointer;
       font-size: 20px;
+      z-index: 15; /* 按钮在最前面 */
     }
+
     .carousel-btn.left {
-      left: 10px;
+      left: 0;
     }
+
     .carousel-btn.right {
-      right: 10px;
+      right: 0;
     }
 
     /* 轮播容器样式 */
@@ -121,15 +131,15 @@
       data: {
         cards: [
           { title: 'Card 1', description: 'This is card 1', class: 'big-card' },
-          { title: 'Card 2', description: 'This is card 2', class: 'lean-card' },
-          { title: 'Card 3', description: 'This is card 3', class: 'lean-card' },
+          { title: 'Card 2', description: 'This is card 2', class: 'lean-card-left' },
+          { title: 'Card 3', description: 'This is card 3', class: 'lean-card-right' },
         ],
         currentIndex: 0
       },
       computed: {
         wrapperStyle() {
           return {
-            transform: `rotateY(${this.currentIndex * -30}deg)`
+            transform: `translateX(-${this.currentIndex * 320}px)`  /* 控制卡片的水平滑动 */
           };
         }
       },
@@ -157,12 +167,17 @@
             if (index === this.currentIndex) {
               card.class = 'big-card';
             } else if (index === (this.currentIndex + 1) % this.cards.length) {
-              card.class = 'lean-card';
+              card.class = 'lean-card-left';
+            } else if (index === (this.currentIndex - 1 + this.cards.length) % this.cards.length) {
+              card.class = 'lean-card-right';
             } else {
-              card.class = 'lean-card';
+              card.class = 'lean-card-left'; /* 默认 */
             }
           });
         }
+      },
+      mounted() {
+        this.updateCardClasses(); /* 初始化卡片类 */
       }
     });
   </script>
