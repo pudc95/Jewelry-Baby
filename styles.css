@@ -85,12 +85,6 @@ main {
   margin-bottom: 15px;
 }
 
-.price {
-  font-size: 18px;
-  font-weight: bold;
-  color: #e74c3c;
-}
-
 .buy-btn {
   background-color: #e74c3c;
   color: white;
