@@ -57,78 +57,40 @@
 <!--
   本页外部输入说明：
 
-  【作品集信息】
-  1. 作品集名称（可配置）：
-     - Volume I · Aurora Collection
+  【作品集数据来源】
+  - 由 script.js 中的 volumesData 控制
+  - 每个作品集包含：
+    1. name（名称）
+    2. images（6 张）
+    3. descriptions（6 条）
 
-  2. 作品图片（6 张）：
-     - v1-1.jpg
-     - v1-2.jpg
-     - v1-3.jpg
-     - v1-4.jpg
-     - v1-5.jpg
-     - v1-6.jpg
-
-  3. 作品说明（可配置）：
-     - 简短描述，用于传达灵感与气质
-
-  4. 作品集按钮链接（可选）：
-     - volume-1.html（或 #）
+  【锚点说明】
+  - 每个作品集名称按钮包含一个 .volume-anchor
+  - 所有锚点由一条 .volume-line 连接
 -->
 
 <section id="collection">
 
-  <div class="collection-header">
-    <h2>Works</h2>
-    <p>Curated collections crafted as complete artistic volumes.</p>
-  </div>
-
-  <!-- 单个作品集 开始 -->
+  <!-- 作品集展示区（内容会被 JS 动态替换） -->
   <div class="collection-volume">
 
-    <div class="volume-grid">
-
-      <div class="volume-item">
-        <img src="v1-1.jpg" alt="JewelryBaby Work 1">
-        <p>Quiet brilliance shaped by time.</p>
-      </div>
-
-      <div class="volume-item">
-        <img src="v1-2.jpg" alt="JewelryBaby Work 2">
-        <p>Light captured in its purest form.</p>
-      </div>
-
-      <div class="volume-item">
-        <img src="v1-3.jpg" alt="JewelryBaby Work 3">
-        <p>A balance between strength and grace.</p>
-      </div>
-
-      <div class="volume-item">
-        <img src="v1-4.jpg" alt="JewelryBaby Work 4">
-        <p>Designed for silent confidence.</p>
-      </div>
-
-      <div class="volume-item">
-        <img src="v1-5.jpg" alt="JewelryBaby Work 5">
-        <p>Where structure meets emotion.</p>
-      </div>
-
-      <div class="volume-item">
-        <img src="v1-6.jpg" alt="JewelryBaby Work 6">
-        <p>Minimal form, lasting presence.</p>
-      </div>
-
-    </div>
-
-    <!-- 作品集名称按钮 -->
-    <div class="volume-footer">
-      <a href="#" class="volume-button">
-        Volume I · Aurora Collection
-      </a>
+    <div id="volumeGrid" class="volume-grid">
+      <!-- JS 动态注入 6 个作品 -->
     </div>
 
   </div>
-  <!-- 单个作品集 结束 -->
+
+  <!-- 作品集导航区 -->
+  <div class="volume-navigation">
+
+    <!-- 理念延展线 -->
+    <div class="volume-line"></div>
+
+    <div id="volumeNav" class="volume-nav-track">
+      <!-- JS 动态生成作品集名称按钮 -->
+    </div>
+
+  </div>
 
 </section>
 <!-- 第三页 结束 -->
