@@ -43,8 +43,8 @@
 
 /* 按钮样式 */
 #exploreBtn {
-  padding: 12px 28px;
-  font-size: 1rem;
+  padding: 14px 36px;
+  font-size: 1.1rem;
   font-weight: 600;
   background-color: transparent;
   border: 2px solid #fff;
@@ -54,20 +54,23 @@
   text-align: center;
   transition: 0.3s ease;
   text-transform: uppercase;
+  border-radius: 30px; /* 圆角按钮 */
+  outline: none; /* 去掉按钮焦点框 */
 }
 
 #exploreBtn:hover {
   background-color: #fff;
   color: #000;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7); /* 增加光效 */
 }
 
-/* 按钮内链接样式 */
+/* 不需要链接下划线 */
 .explore-link {
   text-decoration: none;
-  color: inherit;
 }
 
 /* 第一页 结束 */
+
 
 
 /* 第二页 开始 - 品牌与价值观 Brand Philosophy */
