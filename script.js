@@ -14,15 +14,16 @@ document.getElementById("exploreBtn").addEventListener("click", function() {
 
 // 第二页 结束
 
-// 第三页 开始 - 作品展示 Collection
+// 第三页 开始 - 作品集展示 Collection Volume
 /*
   JS 预留说明：
-  - 后期可加：
-    1. 滚动渐显
-    2. 悬停细节动画
-    3. 点击进入单品详情页
+  - 后期可扩展：
+    1. 点击作品集按钮，展开更多作品
+    2. 横向切换不同 Volume
+    3. 加入轻微 hover / scroll 动画
 */
 
-// 当前版本：静态展示，无交互
+// 当前版本为静态展示，无交互逻辑
 
 // 第三页 结束
+
