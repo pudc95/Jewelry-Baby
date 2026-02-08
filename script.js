@@ -6,3 +6,10 @@ document.getElementById("exploreBtn").addEventListener("click", function() {
 });
 
 // 第一页 结束
+
+// 第二页 开始 - 品牌与价值观 Brand Philosophy
+
+// 预留：后期可加滚动动画 / 渐显效果
+// 示例：IntersectionObserver
+
+// 第二页 结束
