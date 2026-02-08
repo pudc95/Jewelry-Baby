@@ -110,3 +110,68 @@
 }
 
 /* 第二页 结束 */
+
+/* 第三页 开始 - 作品展示 Collection */
+/*
+  样式说明：
+  - 使用网格布局，强调留白
+  - 图片优先，文字克制
+  - 不出现价格 / 按钮
+*/
+
+#collection {
+  background-color: #ffffff;
+  padding: 120px 8%;
+}
+
+.collection-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.collection-header h2 {
+  font-size: 2.6rem;
+  font-family: "Times New Roman", serif;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.collection-header p {
+  font-size: 1rem;
+  color: #555;
+  letter-spacing: 0.5px;
+}
+
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 80px 60px;
+}
+
+.collection-item {
+  text-align: center;
+}
+
+.collection-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 30px;
+}
+
+.collection-item h3 {
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin-bottom: 12px;
+  color: #000;
+}
+
+.collection-item p {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.6;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+/* 第三页 结束 */
