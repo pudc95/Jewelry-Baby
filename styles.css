@@ -213,7 +213,7 @@
 
 /* 第三页 结束 */
 
-/* 第四页 开始 - 场景与气质 Scene & Lifestyle */
+/* 第四页 开始 - 珠宝场景与理念传递 */
 
 /* 整体布局 */
 .scene-section {
@@ -221,7 +221,7 @@
   padding: 100px 8%;
 }
 
-/* 首屏背景：视频或大图 */
+/* 首屏背景：视频或大图，展现自然与珠宝的融合 */
 .hero {
   position: relative;
   width: 100%;
@@ -255,7 +255,7 @@
   letter-spacing: 2px;
 }
 
-/* 品牌理念介绍 */
+/* 品牌理念 */
 .scene-intro {
   text-align: center;
   margin: 60px auto;
@@ -265,62 +265,47 @@
   font-size: 1.2rem;
   color: #555;
   line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-/* 场景图展示 */
+/* 场景展示 */
 .scene-gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
   margin-top: 60px;
 }
 
 .scene-item {
   position: relative;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.scene-item img {
+.scene-image-wrapper {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background-color: #f4f4f4;
+}
+
+.scene-image-wrapper img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
-  transition: transform 0.3s ease;
+  display: block;
 }
 
-.scene-item:hover img {
-  transform: scale(1.1);
-}
-
-.scene-item .caption {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  color: #fff;
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-
-/* 底部 CTA */
-.scene-cta {
-  margin-top: 80px;
+.scene-caption {
+  font-size: 1rem;
+  color: #333;
   text-align: center;
-}
-
-.scene-anchor {
-  padding: 12px 28px;
-  border: 1px solid #000;
-  color: #000;
-  text-decoration: none;
-  font-size: 0.85rem;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
-}
-
-.scene-anchor:hover {
-  background-color: #000;
-  color: #fff;
+  margin-top: 16px;
+  font-style: italic;
 }
 
 /* 第四页 结束 */
+
