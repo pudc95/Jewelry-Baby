@@ -315,7 +315,7 @@
 /* 左侧第二张图片 - 左下斜边朝上 */
 .image-2 {
   background-image: url('image2.jpg');
-  clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%);
+  clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
 }
 
 /* 右侧第一张图片 - 右上斜边朝下 */
@@ -327,7 +327,7 @@
 /* 右侧第二张图片 - 右下斜边朝上 */
 .image-4 {
   background-image: url('image4.jpg');
-  clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%);
+  clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
 }
 
 /* 第四页 结束 */
