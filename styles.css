@@ -245,99 +245,84 @@
 
 /* 第三页 结束 */
 
-/* 第四页 开始 - 珠宝场景与理念传递 */
+/* 第四页 开始 - Philosophy and Jewelry in Natural Settings */
 
 /* 整体布局 */
-.scene-section {
-  background-color: #fff;
-  padding: 100px 8%;
-}
-
-/* 首屏背景：视频或大图，展现自然与珠宝的融合 */
-.hero {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
+#philosophy {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  background-color: #000;
+  padding: 80px 10%;
+  background-color: #fff;
+  position: relative;
 }
 
-.hero video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.hero img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.hero-title {
-  position: absolute;
-  color: #fff;
-  font-size: 3rem;
+/* 中央理念部分 */
+.philosophy-content {
   text-align: center;
-  padding: 0 30px;
-  font-weight: 600;
-  letter-spacing: 2px;
+  max-width: 40%;
 }
 
-/* 品牌理念 */
-.scene-intro {
-  text-align: center;
-  margin: 60px auto;
+.philosophy-content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 
-.scene-intro p {
-  font-size: 1.2rem;
-  color: #555;
-  line-height: 1.8;
-  max-width: 800px;
+.philosophy-content p {
+  font-size: 1.6rem;
+  font-style: italic;
+  line-height: 1.6;
+  max-width: 80%;
   margin: 0 auto;
 }
 
-/* 场景展示 */
-.scene-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 40px;
-  margin-top: 60px;
+/* 左右图片容器 */
+.image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 25%;
 }
 
-.scene-item {
-  position: relative;
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.image-container.left {
+  margin-right: 10%;
 }
 
-.scene-image-wrapper {
+.image-container.right {
+  margin-left: 10%;
+}
+
+/* 图片样式 */
+.image {
   width: 100%;
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
-  background-color: #f4f4f4;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  margin-bottom: 20px;
 }
 
-.scene-image-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
+.image-1 {
+  background-image: url('image1.jpg');
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); /* 左上斜边朝下 */
 }
 
-.scene-caption {
-  font-size: 1rem;
-  color: #333;
-  text-align: center;
-  margin-top: 16px;
-  font-style: italic;
+.image-2 {
+  background-image: url('image2.jpg');
+  clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%); /* 左下斜边朝上 */
+}
+
+.image-3 {
+  background-image: url('image3.jpg');
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); /* 右上斜边朝下 */
+}
+
+.image-4 {
+  background-image: url('image4.jpg');
+  clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%); /* 右下斜边朝上 */
 }
 
 /* 第四页 结束 */
-
