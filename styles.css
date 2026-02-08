@@ -245,110 +245,94 @@
 
 /* 第三页 结束 */
 
-/* ===============================
-   第四页 开始 - 理念与珠宝适配场景
-   页面目标：
-   - 中间文案真正居中且占据空间
-   - 左右图片分别贴合左右 10% 边线
-   - 梯形裁剪形成“自然但不完美”的秩序感
-   =============================== */
+/* 第四页 开始 - Philosophy and Jewelry in Natural Settings */
 
 /* 整体布局 */
 #philosophy {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 100px 10%;          /* 页面左右各留 10% 空白 */
-  background-color: #ffffff;
-  box-sizing: border-box;
+  padding: 80px 10%;
+  background-color: #fff;
+  position: relative;
 }
 
-/* ===============================
-   中间理念文案区域
-   =============================== */
-
+/* 中央理念部分 */
 .philosophy-content {
-  width: 36%;                  /* 中间区域明确占位，避免压图 */
   text-align: center;
+  position: absolute; /* 将文案固定在中间 */
+  left: 50%;
+  transform: translateX(-50%); /* 水平居中 */
+  z-index: 1;
 }
 
 .philosophy-content h2 {
-  font-size: 1.6rem;           /* 小标题克制、偏艺术 */
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  margin-bottom: 24px;
-  color: #111;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 
 .philosophy-content p {
-  font-size: 0.95rem;          /* 字号刻意偏小，显高级 */
-  line-height: 1.9;
-  max-width: 28em;             /* 控制每行字数，避免一行过长 */
+  font-size: 1.6rem;
+  font-style: italic;
+  line-height: 1.6;
+  max-width: 80%;
   margin: 0 auto;
-  color: #333;
 }
 
-/* ===============================
-   左右图片容器
-   =============================== */
-
+/* 左右图片容器 */
 .image-container {
-  width: 22%;                  /* 左右图片横向宽度一致 */
   display: flex;
   flex-direction: column;
-  gap: 32px;                   /* 上下图片间距一致 */
+  justify-content: space-between;
+  align-items: center;
+  width: 25%;
 }
 
-/* 左侧图片左对齐 */
+/* 左侧图片容器左对齐 */
 .image-container.left {
-  align-items: flex-start;
+  margin-right: 10%;
+  align-items: flex-start; /* 左对齐 */
 }
 
-/* 右侧图片右对齐 */
+/* 右侧图片容器右对齐 */
 .image-container.right {
-  align-items: flex-end;
+  margin-left: 10%;
+  align-items: flex-end; /* 右对齐 */
 }
 
-/* ===============================
-   图片通用样式
-   =============================== */
-
+/* 图片样式 */
 .image {
   width: 100%;
-  height: 220px;
+  height: 200px;
   background-size: cover;
   background-position: center;
-  overflow: hidden;
+  margin-bottom: 20px;
 }
 
-/* ===============================
-   梯形裁剪规则
-   说明：
-   - 左上 / 右上：斜边朝下
-   - 左下 / 右下：斜边朝上
-   - 左右梯形斜边宽度保持一致
-   =============================== */
-
-/* 左上图片：斜边朝下，底边贴左 */
-.image.left-top {
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+/* 左侧第一张图片 - 左上斜边朝下 */
+.image-1 {
+  background-image: url('image1.jpg');
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 }
 
-/* 左下图片：斜边朝上，顶边贴左 */
-.image.left-bottom {
-  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+/* 左侧第二张图片 - 左下斜边朝上 */
+.image-2 {
+  background-image: url('image2.jpg');
+  clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
 }
 
-/* 右上图片：斜边朝下，短边贴右 */
-.image.right-top {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+/* 右侧第一张图片 - 右上斜边朝下 */
+.image-3 {
+  background-image: url('image3.jpg');
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 }
 
-/* 右下图片：斜边朝上，底边贴右 */
-.image.right-bottom {
-  clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
+/* 右侧第二张图片 - 右下斜边朝上 */
+.image-4 {
+  background-image: url('image4.jpg');
+  clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
 }
 
-/* ===============================
-   第四页 结束
-   =============================== */
+/* 第四页 结束 */
+
