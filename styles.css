@@ -250,7 +250,7 @@
 /* 整体布局 */
 #philosophy {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 80px 10%;
   background-color: #fff;
@@ -289,12 +289,16 @@
   width: 25%;
 }
 
+/* 左侧图片容器左对齐 */
 .image-container.left {
   margin-right: 10%;
+  align-items: flex-start; /* 左对齐 */
 }
 
+/* 右侧图片容器右对齐 */
 .image-container.right {
   margin-left: 10%;
+  align-items: flex-end; /* 右对齐 */
 }
 
 /* 图片样式 */
