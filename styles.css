@@ -173,5 +173,43 @@
   gap: 60px 40px;
 }
 
+/* 六宫格 */
+.volume-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* 单个作品 */
+.volume-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* 图片容器：统一 4:3 */
+.volume-image-wrapper {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background-color: #f2f2f2;
+}
+
+/* 图片自适应裁剪 */
+.volume-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* 核心 */
+  object-position: center;
+  display: block;
+}
+
+/* 描述文字 */
+.volume-desc {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
 /* 第三页 结束 */
 
