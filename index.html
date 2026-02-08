@@ -95,46 +95,57 @@
 </section>
 <!-- 第三页 结束 -->
 
-<!-- 第四页 开始 - 场景与气质 Scene & Lifestyle -->
+<!-- 第四页 开始 - 珠宝场景与理念传递 -->
 <!--
   外部输入：
   1. heroImage：首屏背景图
   2. heroVideo：可选，首屏背景视频
   3. heroTitle：首屏标题文字
-  4. introText：介绍品牌理念
-  5. sceneImages：每个场景包含图片、标题、描述
-  6. ctaAnchorId：下一页的锚点
+  4. introText：品牌理念文字
+  5. scenes：多个场景，每个包含：
+      - img：场景图片（珠宝+自然）
+      - caption：每个场景的描述文字
 -->
 
 <section id="scene" class="scene-section">
 
-  <!-- 首屏背景图或视频 -->
+  <!-- 首屏背景：视频或大图，展现自然与珠宝的融合 -->
   <div class="hero">
-    <!-- 如果有视频，则替代图片 -->
+    <!-- 如果有视频，则使用 video 元素 -->
     <video autoplay loop muted>
       <source src="hero-video.mp4" type="video/mp4">
       <img src="hero.jpg" alt="JewelryBaby Lifestyle">
     </video>
-    <h1 class="hero-title">JewelryBaby: 品味与气质的延展</h1>
+    <h1 class="hero-title">JewelryBaby: 亲近自然，发现不完美的美</h1>
   </div>
 
   <!-- 品牌理念 -->
   <div class="scene-intro">
-    <p>引领新时代珠宝美学，承载中华文化精髓，以数智理念推动数字化到数智化的发展。</p>
+    <p>通过与自然的亲密接触，发现珠宝的不完美之美，珠宝本身就是一个永恒的艺术作品，承载着生命的故事。</p>
   </div>
 
-  <!-- 多个场景展示 -->
+  <!-- 多场景展示区 -->
   <div class="scene-gallery">
-    <!-- JS 动态插入场景图 -->
-  </div>
-
-  <!-- 底部引导 -->
-  <div class="scene-cta">
-    <a href="#collection" class="scene-anchor">探索我们的作品</a>
+    <!-- JS 动态生成场景图片 -->
+    <!-- 每个场景的展示 -->
+    <div class="scene-item">
+      <div class="scene-image-wrapper">
+        <img src="scene1.jpg" alt="珠宝与大自然">
+      </div>
+      <p class="scene-caption">珠宝与大自然的融合，完美与不完美并存。</p>
+    </div>
+    <div class="scene-item">
+      <div class="scene-image-wrapper">
+        <img src="scene2.jpg" alt="珠宝与自然元素">
+      </div>
+      <p class="scene-caption">在自然的纹理中，发现属于珠宝的独特美。</p>
+    </div>
+    <!-- 可以继续添加更多场景 -->
   </div>
 
 </section>
 <!-- 第四页 结束 -->
+
 
   
   <script src="script.js"></script>
