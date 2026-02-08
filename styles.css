@@ -59,23 +59,23 @@
   padding: 15px 35px;
   font-size: 1.2rem;
   font-weight: 600;
-  background-color: #d4af37; /* 金色背景 */
-  border: 2px solid #fff;
+  background: linear-gradient(45deg, #d4af37, #b8860b); /* 金色渐变背景 */
+  border: none;
   color: #fff;
   letter-spacing: 1px;
   cursor: pointer;
   text-align: center;
   transition: 0.3s ease;
   text-transform: uppercase;
-  border-radius: 30px; /* 圆角按钮 */
+  border-radius: 50px; /* 更圆润的圆角按钮 */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* 柔和阴影 */
   outline: none;
 }
 
 #exploreBtn:hover {
-  background-color: #b8860b; /* 深金色 */
-  color: #fff;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* 增加按钮光效 */
-  transform: scale(1.05); /* 增加按钮放大效果 */
+  background: linear-gradient(45deg, #b8860b, #d4af37); /* 悬停时颜色反转 */
+  transform: translateY(-4px); /* 向上移动 */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* 增强阴影效果 */
 }
 
 /* 不需要链接下划线 */
