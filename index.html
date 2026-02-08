@@ -98,49 +98,43 @@
 <!-- 第四页 开始 - 场景与气质 Scene & Lifestyle -->
 <!--
   外部输入：
-  1. heroImage：首屏大图
-  2. heroTitle：首屏大标题
-  3. introText：介绍文字
-  4. scenes：数组，每个场景包含：
-      - img：场景图片
-      - caption：文字说明
-  5. ctaAnchorId：下一页锚点
+  1. heroImage：首屏背景图
+  2. heroVideo：可选，首屏背景视频
+  3. heroTitle：首屏标题文字
+  4. introText：介绍品牌理念
+  5. sceneImages：每个场景包含图片、标题、描述
+  6. ctaAnchorId：下一页的锚点
 -->
 
 <section id="scene" class="scene-section">
 
-  <!-- 首屏大图 -->
-  <div class="scene-hero">
-    <img src="hero.jpg" alt="JewelryBaby Lifestyle">
-    <h2 class="scene-title">JewelryBaby: 品味与气质的延展</h2>
+  <!-- 首屏背景图或视频 -->
+  <div class="hero">
+    <!-- 如果有视频，则替代图片 -->
+    <video autoplay loop muted>
+      <source src="hero-video.mp4" type="video/mp4">
+      <img src="hero.jpg" alt="JewelryBaby Lifestyle">
+    </video>
+    <h1 class="hero-title">JewelryBaby: 品味与气质的延展</h1>
   </div>
 
-  <!-- 简短介绍 -->
+  <!-- 品牌理念 -->
   <div class="scene-intro">
     <p>引领新时代珠宝美学，承载中华文化精髓，以数智理念推动数字化到数智化的发展。</p>
   </div>
 
-  <!-- 多场景网格 -->
-  <div class="scene-grid">
-    <!-- JS 动态生成场景图片 -->
-    <!-- 示例：
-    <div class="scene-item">
-      <div class="scene-image-wrapper">
-        <img src="scene1.jpg" alt="">
-      </div>
-      <p class="scene-caption">场景描述文字</p>
-    </div>
-    -->
+  <!-- 多个场景展示 -->
+  <div class="scene-gallery">
+    <!-- JS 动态插入场景图 -->
   </div>
 
-  <!-- 下一页锚点 -->
+  <!-- 底部引导 -->
   <div class="scene-cta">
-    <a href="#collection" class="scene-anchor">下一页作品集</a>
+    <a href="#collection" class="scene-anchor">探索我们的作品</a>
   </div>
 
 </section>
 <!-- 第四页 结束 -->
-
 
   
   <script src="script.js"></script>
