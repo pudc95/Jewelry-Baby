@@ -9,8 +9,10 @@
   background-color: #000; /* 背景色 */
   color: #fff;
   position: relative;
+  overflow: hidden; /* 防止图片溢出 */
 }
 
+/* 背景图片 */
 .hero-visual img {
   width: 100%;
   height: 100%;
@@ -18,45 +20,70 @@
   position: absolute;
   top: 0;
   left: 0;
+  filter: brightness(0.6); /* 背景图片亮度调整，使文字更加清晰 */
 }
 
+/* 内容区 */
 .hero-content {
   position: absolute;
   text-align: center;
   color: white;
   z-index: 1;
+  padding: 0 20px;
+  max-width: 90%; /* 确保内容不超出 */
 }
 
+/* 品牌名 */
 .hero-content h1 {
-  font-size: 3rem; /* 主标题 */
-  font-family: 'Times New Roman', serif;
+  font-size: 4rem; /* 增加品牌名字体 */
+  font-weight: 700;
+  letter-spacing: 3px;
+  font-family: 'Georgia', serif; /* 选择现代感的字体 */
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8); /* 文字阴影提升可读性 */
 }
 
+/* 标语 */
 .hero-content p {
-  font-size: 1.5rem;
-  margin-top: 10px;
+  font-size: 1.6rem;
   font-style: italic;
+  margin-top: 10px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* 增加文字清晰度 */
+  line-height: 1.5;
+  margin-bottom: 40px;
 }
 
-.hero-content button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: gold;
-  border: none;
-  cursor: pointer;
+/* 按钮样式 */
+#exploreBtn {
+  padding: 15px 35px;
   font-size: 1.2rem;
+  font-weight: 600;
+  background-color: #d4af37; /* 金色背景 */
+  border: 2px solid #fff;
+  color: #fff;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.3s ease;
+  text-transform: uppercase;
+  border-radius: 30px; /* 圆角按钮 */
+  outline: none;
 }
 
-.hero-content button:hover {
-  background-color: darkgoldenrod;
+#exploreBtn:hover {
+  background-color: #b8860b; /* 深金色 */
+  color: #fff;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* 增加按钮光效 */
+  transform: scale(1.05); /* 增加按钮放大效果 */
+}
+
+/* 不需要链接下划线 */
+.explore-link {
+  text-decoration: none;
 }
 
 /* 第一页 结束 */
-
-
-
-
-
 
 /* 第二页 开始 - 品牌与价值观 Brand Philosophy */
 
