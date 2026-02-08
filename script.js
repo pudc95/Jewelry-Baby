@@ -14,7 +14,9 @@ document.getElementById("exploreBtn").addEventListener("click", function() {
 
 // 第二页 结束
 
+// ===============================
 // 第三页 开始 - 作品集切换与理念延展交互
+// ===============================
 
 const volumesData = [
   {
@@ -57,47 +59,89 @@ let activeIndex = 0;
 const grid = document.getElementById("volumeGrid");
 const nav = document.getElementById("volumeNav");
 
+/* -------------------------------
+   渲染作品集内容（6 件作品）
+-------------------------------- */
 function renderVolume(index) {
   grid.innerHTML = "";
+
   volumesData[index].works.forEach(work => {
-    grid.innerHTML += `
-      <div class="volume-item">
-        <img src="${work.img}">
-        <p>${work.text}</p>
+    const item = document.createElement("div");
+    item.className = "volume-item";
+
+    item.innerHTML = `
+      <div class="volume-image-wrapper">
+        <img src="${work.img}" alt="">
       </div>
+      <p class="volume-desc">${work.text}</p>
     `;
+
+    grid.appendChild(item);
   });
 }
 
-function renderNav() {
+/* -------------------------------
+   初始化作品集导航（只建一次）
+-------------------------------- */
+function initNav() {
   nav.innerHTML = "";
+
   volumesData.forEach((v, i) => {
     const item = document.createElement("div");
-    item.className = "volume-nav-item" + (i === activeIndex ? " active" : "");
+    item.className = "volume-nav-item";
+    item.dataset.index = i;
+
     item.innerHTML = `
-      ${v.name}
+      <span class="volume-title">${v.name}</span>
       <div class="volume-anchor"></div>
     `;
-    item.onclick = () => {
-      activeIndex = i;
-      update();
-    };
+
+    item.addEventListener("click", () => {
+      if (activeIndex !== i) {
+        activeIndex = i;
+        update();
+      }
+    });
+
     nav.appendChild(item);
   });
 }
 
-function update() {
-  renderVolume(activeIndex);
-  renderNav();
+/* -------------------------------
+   更新导航状态 + 居中滑动
+-------------------------------- */
+function updateNav() {
+  const items = nav.querySelectorAll(".volume-nav-item");
 
-  // 滑动使当前项居中（简化版）
-  const offset = (activeIndex - Math.floor(volumesData.length / 2)) * -160;
+  items.forEach((item, i) => {
+    item.classList.toggle("active", i === activeIndex);
+  });
+
+  // 让当前作品集滑到中间
+  const itemWidth = 160; // 与 CSS 保持一致
+  const centerOffset = Math.floor(items.length / 2);
+  const offset = (activeIndex - centerOffset) * -itemWidth;
+
   nav.style.transform = `translateX(${offset}px)`;
 }
 
-// 初始化
+/* -------------------------------
+   总更新函数
+-------------------------------- */
+function update() {
+  renderVolume(activeIndex);
+  updateNav();
+}
+
+/* -------------------------------
+   初始化
+-------------------------------- */
+initNav();
 update();
 
+// ===============================
 // 第三页 结束
+// ===============================
+
 
 
