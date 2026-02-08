@@ -8,7 +8,7 @@
   height: 100vh; /* 全屏 */
   background-color: #000; /* 背景色 */
   color: #fff;
-  position: relative;
+  position: relative; 
   overflow: hidden; /* 防止图片溢出 */
 }
 
