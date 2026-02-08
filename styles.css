@@ -111,90 +111,67 @@
 
 /* 第二页 结束 */
 
-/* 第三页 开始 - 作品集展示 Collection Volume */
-/*
-  样式说明：
-  - 一集 = 两行三列
-  - 图片统一比例，强调秩序感
-  - 集名作为“低调但明确”的行动按钮
-*/
+/* 第三页 开始 - 作品集交互 Collection Volume */
 
-#collection {
-  background-color: #ffffff;
-  padding: 120px 8%;
+.volume-navigation {
+  position: relative;
+  margin-top: 120px;
+  overflow: hidden;
 }
 
-.collection-header {
+/* 理念延展线 */
+.volume-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #ccc;
+  z-index: 1;
+}
+
+/* 名称按钮轨道 */
+.volume-nav-track {
+  display: flex;
+  gap: 80px;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.6s ease;
+  position: relative;
+  z-index: 2;
+}
+
+/* 单个作品集按钮 */
+.volume-nav-item {
   text-align: center;
-  margin-bottom: 90px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #999;
+  position: relative;
+  white-space: nowrap;
 }
 
-.collection-header h2 {
-  font-size: 2.6rem;
-  font-family: "Times New Roman", serif;
-  margin-bottom: 20px;
-  color: #111;
+.volume-nav-item.active {
+  color: #000;
 }
 
-.collection-header p {
-  font-size: 1rem;
-  color: #555;
-  letter-spacing: 0.5px;
+/* 锚点 */
+.volume-anchor {
+  width: 6px;
+  height: 6px;
+  background-color: #000;
+  border-radius: 50%;
+  margin: 12px auto 0;
 }
 
-/* 单个作品集容器 */
-.collection-volume {
-  margin-bottom: 140px;
-}
-
-/* 两行三列网格 */
+/* 作品集网格（复用你已有的） */
 .volume-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 60px 40px;
 }
 
-/* 单个作品 */
-.volume-item {
-  text-align: center;
-}
-
-.volume-item img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  margin-bottom: 18px;
-}
-
-.volume-item p {
-  font-size: 0.85rem;
-  color: #666;
-  line-height: 1.6;
-  max-width: 260px;
-  margin: 0 auto;
-}
-
-/* 作品集底部按钮 */
-.volume-footer {
-  text-align: center;
-  margin-top: 80px;
-}
-
-.volume-button {
-  display: inline-block;
-  padding: 14px 36px;
-  border: 1px solid #000;
-  color: #000;
-  text-decoration: none;
-  font-size: 0.85rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
-}
-
-.volume-button:hover {
-  background-color: #000;
-  color: #fff;
-}
-
 /* 第三页 结束 */
+
