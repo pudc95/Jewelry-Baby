@@ -143,5 +143,28 @@ update();
 // 第三页 结束
 // ===============================
 
+// 第四页 开始 - 场景动态生成
+const scenesData = [
+  { img: "scene1.jpg", caption: "优雅午后，珠宝与光影对话" },
+  { img: "scene2.jpg", caption: "高端晚宴中的低调奢华" },
+  { img: "scene3.jpg", caption: "日常佩戴，彰显内在气质" },
+  { img: "scene4.jpg", caption: "都市街头，闪耀不凡" }
+];
+
+const sceneGrid = document.querySelector(".scene-grid");
+
+scenesData.forEach(scene => {
+  const item = document.createElement("div");
+  item.className = "scene-item";
+  item.innerHTML = `
+    <div class="scene-image-wrapper">
+      <img src="${scene.img}" alt="">
+    </div>
+    <p class="scene-caption">${scene.caption}</p>
+  `;
+  sceneGrid.appendChild(item);
+});
+
+// 第四页 结束
 
 
