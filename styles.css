@@ -1,7 +1,7 @@
 /* 第一页 开始 - Hero Section */
 
 /* 背景和图片全屏 */ 
-#hero {
+#hero { 
   display: flex;
   justify-content: center;
   align-items: center;
